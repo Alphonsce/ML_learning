@@ -60,7 +60,8 @@ class Q_func_Trainer:
             # на всём batch'е обучаемся
             Q_new = reward[idx]
             if not game_over[idx]:
-                Q_new = reward[idx] + self.gamma * torch.max(self.model(next_state[idx]))       # уравнение Беллмана, оно использует как раз reward 
+                Q_new = reward[idx] + self.gamma * torch.max(self.model(next_state[idx]))       # уравнение Беллмана, оно использует как раз reward
+                print(Q_new) 
 
             target[idx][torch.argmax(action[idx]).item()] = Q_new
     

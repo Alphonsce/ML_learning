@@ -188,6 +188,7 @@ def running_learned_snake(path_to_the_file_for_model='./model/learned_model.pth'
 
 
 if __name__ == '__main__':
+    ''''''
     pygame.init()
     #training_process()
     running_learned_snake()
