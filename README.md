@@ -1,5 +1,4 @@
 This is a repo, where I keep all my DS/ML programms
 
-Libraries I am using:
-
-![This is an image](pics_for_readme/635px-PyTorch_logo_icon.svg.png)
+<img src="https://leaders2021.innoagency.ru/static/img/general/logo.svg"
+  style="height: 80px;">
