@@ -1,3 +1,15 @@
 This is a repo, where I keep all my DS/ML programms
 
-![This is an image](https://www.google.com/search?q=pytorch+%2B+python+logo&tbm=isch&ved=2ahUKEwiS8t6G6Oj0AhWKtCoKHY88B9wQ2-cCegQIABAA&oq=pytorch+%2B+python+logo&gs_lcp=CgNpbWcQAzIECAAQHjoHCCMQ7wMQJzoFCAAQgAQ6BggAEAcQHjoGCAAQCBAeOgYIABAFEB5Q-RJYgjBglTJoAHAAeACAAX-IAa0IkgEEMTQuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=FnO7YZKPFYrpqgGP-ZzgDQ&bih=975&biw=1920#imgrc=yZSVLUnf8BzkeM)
+Libraries I am learning rn:
+
+<img src="https://miro.medium.com/max/700/1*bBS_lYMoWhiyJf733Bghwg.jpeg"
+  style="height: 80px;">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1280px-NumPy_logo_2020.svg.png"
+  style="height: 80px;">
+  
+  <img src="https://raw.githubusercontent.com/jmv74211/matplotlib/master/images/matplotlib_logo.png"
+  style="height: 80px;">
+  
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/2560px-Pandas_logo.svg.png"
+  style="height: 80px;">
