@@ -1,0 +1,7 @@
+virtualenv env_name - makes env folder in your current folder
+
+source env_name/bin/activate
+
+pip freeze > requirements.txt - add all libraries from current python environment to txt
+
+pip install -r /path/to/requirements.txt - install all libraries into current environment
