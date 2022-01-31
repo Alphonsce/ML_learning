@@ -14,5 +14,5 @@ Libraries I am learning rn:
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/2560px-Pandas_logo.svg.png"
   style="height: 80px;">
 
-<img src="https://e7.pngegg.com/pngimages/46/626/png-clipart-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template.png"
-  style="height: 80px;">
+<img src="https://brandslogos.com/wp-content/uploads/thumbs/c-logo-vector.svg"
+  style="height: 100px;">
