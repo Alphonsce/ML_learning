@@ -1,9 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from math import sqrt
-
-data1 = pd.read_csv('/home/alphonse/ML_learning/graphs/one33/qp_1.csv')
+from math import sqrt, log
 
 def calculate_k(x, y, through_zero=False):
     '''
@@ -36,24 +34,27 @@ def calculate_k(x, y, through_zero=False):
         s_b = s_k * sqrt(m_xx - m_x_m_x)
         return [k, s_k, b, s_b]
 
-# Ламинарные области для 1 трубки:
-q1 = data1.loc[0:7, 'q']
-p1 = data1.loc[0:7, 'p']
+dflam = pd.read_csv('/home/alphonse/ML_learning/graphs/one33/loglam.csv')
 
-k1, s_k = calculate_k(p1, q1, True)[0], calculate_k(p1, q1, True)[1]
+lnq = (dflam.copy().q).map(lambda x: log(x / 100000))
+lnr = (dflam.r).map(lambda x: log(x / 1000))
 
-plt.scatter(data1.p, data1.q, label='Экспериментальные точки')
-x = np.arange(0, 161)
-plt.plot(x, k1 * x, label='Экспериментальная зависимость в области ламинарного режима')
+dfturb = pd.read_csv('/home/alphonse/ML_learning/graphs/one33/logturb.csv')
 
-#plt.axvline(x=161, linestyle='dashed', color='red', label='Переход к турбулентному режиму')
+lnq1 = (dfturb.copy().q).map(lambda x: log(x / 100000))
+lnr1 = (dfturb.r).map(lambda x: log(x / 1000))
 
-plt.xlabel(r'$\Delta P$, Па')
-plt.ylabel(r'$Q, 10^{-5}\cdot \dfrac{кг}{c}$' )
-plt.legend(loc='best')
-plt.grid('True')
-plt.xticks(np.arange(0, 500, 25))
+print(calculate_k(lnr1, lnq1))
+print(calculate_k(lnr, lnq))
+
+x = np.arange(-6.5, -5)
+plt.scatter(lnr, lnq)
+plt.plot(x, calculate_k(lnr, lnq)[0] * x + calculate_k(lnr, lnq)[2], label='Ламинарный режим')
+plt.scatter(lnr1, lnq1)
+plt.plot(x, calculate_k(lnr1, lnq1)[0] * x + calculate_k(lnr1, lnq1)[2], label='Турбулентый режим')
+
+plt.xlabel(r'$\ln r$', fontsize=14)
+plt.ylabel(r'$\ln Q$', fontsize=14)
+plt.legend(loc='best', fontsize=14)
 
 plt.show()
-
-print(k1, s_k)

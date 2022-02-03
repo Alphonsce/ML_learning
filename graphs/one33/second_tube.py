@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from math import sqrt
 
-data1 = pd.read_csv('/home/alphonse/ML_learning/graphs/one33/qp_1.csv')
+data2 = pd.read_csv('/home/alphonse/ML_learning/graphs/one33/qp2.csv')
+
+print(data2)
 
 def calculate_k(x, y, through_zero=False):
     '''
@@ -37,13 +39,13 @@ def calculate_k(x, y, through_zero=False):
         return [k, s_k, b, s_b]
 
 # Ламинарные области для 1 трубки:
-q1 = data1.loc[0:7, 'q']
-p1 = data1.loc[0:7, 'p']
+q1 = data2.loc[0:6, 'q']
+p1 = data2.loc[0:6, 'p']
 
-k1, s_k = calculate_k(p1, q1, True)[0], calculate_k(p1, q1, True)[1]
+k1, s_k = calculate_k(p1, q1, through_zero=True)[0], calculate_k(p1, q1, True)[1]
 
-plt.scatter(data1.p, data1.q, label='Экспериментальные точки')
-x = np.arange(0, 161)
+plt.scatter(data2.p, data2.q, label='Экспериментальные точки')
+x = np.arange(0, 200)
 plt.plot(x, k1 * x, label='Экспериментальная зависимость в области ламинарного режима')
 
 #plt.axvline(x=161, linestyle='dashed', color='red', label='Переход к турбулентному режиму')
