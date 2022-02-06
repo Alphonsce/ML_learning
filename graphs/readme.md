@@ -1,7 +1,6 @@
+```python
 def calculate_k(x, y, through_zero=False):
-    '''
     Вычисление коэффициентов для аппроксимации зависимостью y = kx + b
-    '''
     n = len(x)
     m_x = x.mean()
     m_y = y.mean()
@@ -28,3 +27,4 @@ def calculate_k(x, y, through_zero=False):
         s_k = (1 / sqrt(n)) * sqrt((m_yy - m_y_m_y) / (m_xx - m_x_m_x) - k ** 2)
         s_b = s_k * sqrt(m_xx - m_x_m_x)
         return [k, s_k, b, s_b]
+```
