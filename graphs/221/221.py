@@ -45,19 +45,27 @@ lnu3 = df3.u.map(lambda x: log(x))
 lnu4 = df4.u.map(lambda x: log(x))
 lnu5 = df5.u.map(lambda x: log(x))
 
-#k1, sk1, b1 = calculate_k(df1.t, lnu1)[0], calculate_k(df1.t, lnu1)[1], calculate_k(df1.t, lnu1)[2]
-#k2, sk2, b2 = calculate_k(df2.t, lnu2)[0], calculate_k(df2.t, lnu2)[1], calculate_k(df2.t, lnu2)[2]
-#k3, sk3, b3 = calculate_k(df3.t, lnu3)[0], calculate_k(df3.t, lnu3)[1], calculate_k(df3.t, lnu3)[2]
-#k4, sk4, b4 = calculate_k(df4.t, lnu4)[0], calculate_k(df4.t, lnu4)[1], calculate_k(df4.t, lnu4)[2]
+k1, sk1, b1 = calculate_k(df1.t, lnu1)[0], calculate_k(df1.t, lnu1)[1], calculate_k(df1.t, lnu1)[2]
+k2, sk2, b2 = calculate_k(df2.t, lnu2)[0], calculate_k(df2.t, lnu2)[1], calculate_k(df2.t, lnu2)[2]
+k3, sk3, b3 = calculate_k(df3.t, lnu3)[0], calculate_k(df3.t, lnu3)[1], calculate_k(df3.t, lnu3)[2]
+k4, sk4, b4 = calculate_k(df4.t, lnu4)[0], calculate_k(df4.t, lnu4)[1], calculate_k(df4.t, lnu4)[2]
 k5, sk5, b5 = calculate_k(df5.t, lnu5)[0], calculate_k(df5.t, lnu5)[1], calculate_k(df5.t, lnu5)[2]
 
-# plt.plot(df1.t, k1 * df1.t + b1)
-#plt.plot(df2.t, k2 * df2.t + b2)
-#plt.plot(df3.t, k3 * df3.t + b3)
-#plt.plot(df4.t, k4 * df4.t + b4)
+plt.plot(df1.t, k1 * df1.t + b1)
+plt.plot(df2.t, k2 * df2.t + b2)
+plt.plot(df3.t, k3 * df3.t + b3)
+plt.plot(df4.t, k4 * df4.t + b4)
 plt.plot(df5.t, k5 * df5.t + b5)
+
+print(k1, sk1)
+print(k2, sk2)
+print(k3, sk3)
+print(k4, sk4)
+print(k5, sk5)
 
 plt.xlabel(r'$t$, c', fontsize=14)
 plt.ylabel(r'$\ln U$', fontsize=14)
+
+plt.xticks(np.arange(0, 454, 30))
 
 plt.show()
