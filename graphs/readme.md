@@ -1,6 +1,6 @@
 ```python
 def calculate_k(x, y, through_zero=False):
-    Вычисление коэффициентов для аппроксимации зависимостью y = kx + b
+    #Вычисление коэффициентов для аппроксимации зависимостью y = kx + b
     n = len(x)
     m_x = x.mean()
     m_y = y.mean()
