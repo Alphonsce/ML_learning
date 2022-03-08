@@ -1,5 +1,7 @@
 ## Стандартизация данных
 
+После стандартизации: x - mu / sigma, то есть признак становится равным тому насколько он удален от среднего в единицах стандартного отклонения
+
 Myth: standardizing variables makes them normal: https://junkcharts.typepad.com/numbersruleyourworld/2019/11/myth-standardizing-variables-makes-them-normal.html
 
 https://www.quora.com/Is-it-valid-to-standardize-variables-with-non-normal-distribution :
@@ -15,6 +17,8 @@ https://www.quora.com/Is-it-valid-to-standardize-variables-with-non-normal-distr
 
 Стандартизация позволяет нам сравнивать один датасет с другим или один признак с другим, потому что теперь они имеют одинаковый вид
 
-## Нормализация данных
+## Нормализация данных (min max normalization)
+
+Тут мы тупо x - min / max - min
 
 Нормализация не изменяет распределения данных, она лишь масштабирует все данные, располагая их от 0 до 1, то есть она оставляет абсолютно все то же самое, только теперь все имеют одинаковый масштаб
