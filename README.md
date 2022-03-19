@@ -1,7 +1,5 @@
 This is a repo, where I keep all my DS/ML programms
 
-0,63 0,63 for size in matplotlib and scale 0,65 in LaTeX
-
 Libraries I am learning rn:
 
 <img src="https://miro.medium.com/max/700/1*bBS_lYMoWhiyJf733Bghwg.jpeg"
