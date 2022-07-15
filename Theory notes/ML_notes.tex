@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+\input{./packages.tex}        % Подключаемые пакеты
+% \input{./styles.tex}	    % Пользовательские стили
+
+
+\begin{document}
+
+%Титульный лист
+\begin{titlepage}
+\begin{center}
+\hspace{4.0cm}
+\vfill
+
+\huge\textbf{
+    Здесь разная информация и всякие мысли,\\
+    которые у меня накапливаются по ML, математике и 
+    иногда по физике.
+}
+
+\vfill
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Математика}
+
+\subsection{Статистика и теорвер}
+
+\url{http://npm.mipt.ru/books/lab-intro/Ch3.html}
+
+- про метод макс правдоподобия, хи квадрат и МНК
+
+\url{https://drive.google.com/file/d/17h2YiHMHxdlnVp_x9_QAfeVhssiiASQE/view?usp=sharing}
+
+- statistics for machine learning
+
+\url{https://drive.google.com/file/d/17h2YiHMHxdlnVp_x9_QAfeVhssiiASQE/view?usp=sharing}
+
+- ссылка на мой summary теорвера для МЛ
+
+\subsection*{Мои замечания всякие:}
+
+
+
+\subsection{Принципы работы разных моделей}
+
+\subsubsection{НОРМАЛИЗАЦИЯ - for what???}
+
+\subsection{Оценка качества моделей}
+
+\url{https://drive.google.com/file/d/1yIMdmOYVFaqLo6qkMitDXFquPbyo9_sB/view?usp=sharing}
+
+- статья с архива про оценку качества, все очень подробно
+
+\section{Прога}
+
+\subsection{Мысли про примитивные либы(пандас, склерн и тп)}
+
+\subsection{Бустинг в catboost (и не только)}
+
+\url{https://habr.com/ru/company/otus/blog/527554/}
+
+- супер мега статья на хабре про кэтбуст.
+
+\url{https://github.com/Alphonsce/ML_learning/blob/main/house_prices/tree_model.ipynb}
+
+- Также см мой код на гитхабе (здесь топ 10\% в house prices на бустинге) 
+
+\subsection{Заметки о pytorch}
+
+\subsection{Здесь будет все про разные архитектуры сеток}
+
+\subsection{О железе для МЛ}
+
+\subsection{О jit компиляции в питоне и оптимизации вычислений в нем разными пакетами}
+
+Есть Cython - писать в питоне сишный код
+
+Есть Numba - она при помощи менеджера @jit (контекстный менеджер - это по-сути функция принимающая функцию) позволяет некоторые вещи jit компилировать внутри функции.
+
+Лучше использовать @njit, тогда будет использовать только то, что оптимизировано и свалиаться с ошибкой если перешло к обычному питону.
+
+\subsection{* О параллельных вычислениях}
+
+\section{*О базах данных}
+
+Реляционная БД - это набор отношений - то есть табличка по-сути, в ней нельзя сделать вложенность.
+
+Штуки типо Postgresql и пр - это СУБД, у каждой СУБД +- реализован набор базисных операций, которые умеет делать язык запросов SQL
+
+\section{*Заметки по поводу Julia}
+
+\section{**Физика???}
+
+\section{***Не МЛьная математика?????}
+
+\end{document}
